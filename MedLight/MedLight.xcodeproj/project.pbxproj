@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6051A0AD5F400247456 /* AppDelegate.swift */; };
+		74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6071A0AD5F400247456 /* ViewController.swift */; };
+		74C5F60B1A0AD5F400247456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F6091A0AD5F400247456 /* Main.storyboard */; };
+		74C5F60D1A0AD5F400247456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F60C1A0AD5F400247456 /* Images.xcassets */; };
+		74C5F6101A0AD5F400247456 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F60E1A0AD5F400247456 /* LaunchScreen.xib */; };
+		74C5F61C1A0AD5F400247456 /* MedLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F61B1A0AD5F400247456 /* MedLightTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74C5F6161A0AD5F400247456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74C5F5F81A0AD5F400247456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74C5F5FF1A0AD5F400247456;
+			remoteInfo = MedLight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74C5F6001A0AD5F400247456 /* MedLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C5F6041A0AD5F400247456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74C5F6051A0AD5F400247456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		74C5F6071A0AD5F400247456 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		74C5F60A1A0AD5F400247456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74C5F60C1A0AD5F400247456 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		74C5F60F1A0AD5F400247456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		74C5F6151A0AD5F400247456 /* MedLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74C5F61A1A0AD5F400247456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74C5F61B1A0AD5F400247456 /* MedLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedLightTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74C5F5FD1A0AD5F400247456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C5F6121A0AD5F400247456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74C5F5F71A0AD5F400247456 = {
+			isa = PBXGroup;
+			children = (
+				74C5F6021A0AD5F400247456 /* MedLight */,
+				74C5F6181A0AD5F400247456 /* MedLightTests */,
+				74C5F6011A0AD5F400247456 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74C5F6011A0AD5F400247456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74C5F6001A0AD5F400247456 /* MedLight.app */,
+				74C5F6151A0AD5F400247456 /* MedLightTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74C5F6021A0AD5F400247456 /* MedLight */ = {
+			isa = PBXGroup;
+			children = (
+				74C5F6051A0AD5F400247456 /* AppDelegate.swift */,
+				74C5F6071A0AD5F400247456 /* ViewController.swift */,
+				74C5F6091A0AD5F400247456 /* Main.storyboard */,
+				74C5F60C1A0AD5F400247456 /* Images.xcassets */,
+				74C5F60E1A0AD5F400247456 /* LaunchScreen.xib */,
+				74C5F6031A0AD5F400247456 /* Supporting Files */,
+			);
+			path = MedLight;
+			sourceTree = "<group>";
+		};
+		74C5F6031A0AD5F400247456 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74C5F6041A0AD5F400247456 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74C5F6181A0AD5F400247456 /* MedLightTests */ = {
+			isa = PBXGroup;
+			children = (
+				74C5F61B1A0AD5F400247456 /* MedLightTests.swift */,
+				74C5F6191A0AD5F400247456 /* Supporting Files */,
+			);
+			path = MedLightTests;
+			sourceTree = "<group>";
+		};
+		74C5F6191A0AD5F400247456 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74C5F61A1A0AD5F400247456 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74C5F5FF1A0AD5F400247456 /* MedLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C5F61F1A0AD5F400247456 /* Build configuration list for PBXNativeTarget "MedLight" */;
+			buildPhases = (
+				74C5F5FC1A0AD5F400247456 /* Sources */,
+				74C5F5FD1A0AD5F400247456 /* Frameworks */,
+				74C5F5FE1A0AD5F400247456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedLight;
+			productName = MedLight;
+			productReference = 74C5F6001A0AD5F400247456 /* MedLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74C5F6141A0AD5F400247456 /* MedLightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74C5F6221A0AD5F400247456 /* Build configuration list for PBXNativeTarget "MedLightTests" */;
+			buildPhases = (
+				74C5F6111A0AD5F400247456 /* Sources */,
+				74C5F6121A0AD5F400247456 /* Frameworks */,
+				74C5F6131A0AD5F400247456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74C5F6171A0AD5F400247456 /* PBXTargetDependency */,
+			);
+			name = MedLightTests;
+			productName = MedLightTests;
+			productReference = 74C5F6151A0AD5F400247456 /* MedLightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74C5F5F81A0AD5F400247456 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = TeamOne;
+				TargetAttributes = {
+					74C5F5FF1A0AD5F400247456 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					74C5F6141A0AD5F400247456 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 74C5F5FF1A0AD5F400247456;
+					};
+				};
+			};
+			buildConfigurationList = 74C5F5FB1A0AD5F400247456 /* Build configuration list for PBXProject "MedLight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 74C5F5F71A0AD5F400247456;
+			productRefGroup = 74C5F6011A0AD5F400247456 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74C5F5FF1A0AD5F400247456 /* MedLight */,
+				74C5F6141A0AD5F400247456 /* MedLightTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74C5F5FE1A0AD5F400247456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C5F60B1A0AD5F400247456 /* Main.storyboard in Resources */,
+				74C5F6101A0AD5F400247456 /* LaunchScreen.xib in Resources */,
+				74C5F60D1A0AD5F400247456 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C5F6131A0AD5F400247456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74C5F5FC1A0AD5F400247456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */,
+				74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74C5F6111A0AD5F400247456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C5F61C1A0AD5F400247456 /* MedLightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74C5F6171A0AD5F400247456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74C5F5FF1A0AD5F400247456 /* MedLight */;
+			targetProxy = 74C5F6161A0AD5F400247456 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74C5F6091A0AD5F400247456 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C5F60A1A0AD5F400247456 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		74C5F60E1A0AD5F400247456 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74C5F60F1A0AD5F400247456 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74C5F61D1A0AD5F400247456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		74C5F61E1A0AD5F400247456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74C5F6201A0AD5F400247456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MedLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		74C5F6211A0AD5F400247456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MedLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		74C5F6231A0AD5F400247456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MedLightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedLight.app/MedLight";
+			};
+			name = Debug;
+		};
+		74C5F6241A0AD5F400247456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MedLightTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedLight.app/MedLight";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74C5F5FB1A0AD5F400247456 /* Build configuration list for PBXProject "MedLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C5F61D1A0AD5F400247456 /* Debug */,
+				74C5F61E1A0AD5F400247456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74C5F61F1A0AD5F400247456 /* Build configuration list for PBXNativeTarget "MedLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C5F6201A0AD5F400247456 /* Debug */,
+				74C5F6211A0AD5F400247456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74C5F6221A0AD5F400247456 /* Build configuration list for PBXNativeTarget "MedLightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74C5F6231A0AD5F400247456 /* Debug */,
+				74C5F6241A0AD5F400247456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 74C5F5F81A0AD5F400247456 /* Project object */;
+}
