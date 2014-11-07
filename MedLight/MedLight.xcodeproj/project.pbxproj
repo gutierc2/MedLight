@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		024137651A0C40F1005C9341 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024137641A0C40F1005C9341 /* AddPatientViewController.swift */; };
+		024137691A0C4198005C9341 /* AddPatientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024137681A0C4198005C9341 /* AddPatientList.swift */; };
 		74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6051A0AD5F400247456 /* AppDelegate.swift */; };
 		74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6071A0AD5F400247456 /* ViewController.swift */; };
 		74C5F60B1A0AD5F400247456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F6091A0AD5F400247456 /* Main.storyboard */; };
@@ -26,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		024137641A0C40F1005C9341 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPatientViewController.swift; path = ../AddPatientViewController.swift; sourceTree = "<group>"; };
+		024137681A0C4198005C9341 /* AddPatientList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientList.swift; sourceTree = "<group>"; };
+		0241376B1A0C42BB005C9341 /* AddPatientList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AddPatientList.h; path = ../AddPatientList.h; sourceTree = "<group>"; };
 		74C5F6001A0AD5F400247456 /* MedLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C5F6041A0AD5F400247456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C5F6051A0AD5F400247456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,9 +82,12 @@
 		74C5F6021A0AD5F400247456 /* MedLight */ = {
 			isa = PBXGroup;
 			children = (
+				0241376B1A0C42BB005C9341 /* AddPatientList.h */,
+				024137641A0C40F1005C9341 /* AddPatientViewController.swift */,
 				74C5F6051A0AD5F400247456 /* AppDelegate.swift */,
 				74C5F6071A0AD5F400247456 /* ViewController.swift */,
 				74C5F6091A0AD5F400247456 /* Main.storyboard */,
+				024137681A0C4198005C9341 /* AddPatientList.swift */,
 				74C5F60C1A0AD5F400247456 /* Images.xcassets */,
 				74C5F60E1A0AD5F400247456 /* LaunchScreen.xib */,
 				74C5F6031A0AD5F400247456 /* Supporting Files */,
@@ -214,6 +222,8 @@
 			files = (
 				74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */,
 				74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */,
+				024137651A0C40F1005C9341 /* AddPatientViewController.swift in Sources */,
+				024137691A0C4198005C9341 /* AddPatientList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +415,7 @@
 				74C5F6211A0AD5F400247456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74C5F6221A0AD5F400247456 /* Build configuration list for PBXNativeTarget "MedLightTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +424,7 @@
 				74C5F6241A0AD5F400247456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
