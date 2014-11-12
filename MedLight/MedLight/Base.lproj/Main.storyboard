@@ -79,12 +79,17 @@
             <objects>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <viewController title="Add Patient" id="BTl-un-3UK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l7D-0I-XSV">
 =======
                 <viewController id="sY3-MP-lJ3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Fz-66-dSG">
 >>>>>>> Chris's-Branch
+=======
+                <viewController id="sY3-MP-lJ3" customClass="AddPatientViewController" customModule="MedLight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Fz-66-dSG">
+>>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 =======
                 <viewController id="sY3-MP-lJ3" customClass="AddPatientViewController" customModule="MedLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Fz-66-dSG">
@@ -389,10 +394,14 @@
             </objects>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <point key="canvasLocation" x="-424" y="569"/>
 =======
             <point key="canvasLocation" x="-626" y="412"/>
 >>>>>>> Chris's-Branch
+=======
+            <point key="canvasLocation" x="-336" y="770"/>
+>>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 =======
             <point key="canvasLocation" x="-336" y="770"/>
 >>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'

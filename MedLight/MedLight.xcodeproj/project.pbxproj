@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */; };
 		029EFCF81A12DDE1008D0F87 /* NewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */; };
 		029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */; };
@@ -28,6 +29,8 @@
 		74A066661A12C86800384AAC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A066651A12C86800384AAC /* RegistrationViewController.swift */; };
 		74A066681A12D4E900384AAC /* DoctorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A066671A12D4E900384AAC /* DoctorLoginViewController.swift */; };
 >>>>>>> Chris's-Branch
+=======
+>>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 =======
 >>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 		74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6051A0AD5F400247456 /* AppDelegate.swift */; };
@@ -51,6 +54,7 @@
 /* Begin PBXFileReference section */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotepadViewController.swift; sourceTree = "<group>"; };
 		029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedViewController.swift; sourceTree = "<group>"; };
 		029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 		74A066651A12C86800384AAC /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		74A066671A12D4E900384AAC /* DoctorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorLoginViewController.swift; sourceTree = "<group>"; };
 >>>>>>> Chris's-Branch
+=======
+>>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 =======
 >>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 		74C5F6001A0AD5F400247456 /* MedLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,12 +294,15 @@
 			files = (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */,
 				029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */,
 =======
 				74A066661A12C86800384AAC /* RegistrationViewController.swift in Sources */,
 				74A066681A12D4E900384AAC /* DoctorLoginViewController.swift in Sources */,
 >>>>>>> Chris's-Branch
+=======
+>>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 =======
 >>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 				74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */,
