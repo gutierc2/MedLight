@@ -93,6 +93,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
             user["email"] = email.text
             user["phoneNumber"] = phoneNumber.text
             user["pagerNumber"] = pagerNumber.text
+            user["patients"] = []
             
             user.signUpInBackgroundWithBlock
                 {
