@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -39,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Qgw-vu-kDh" kind="modal" id="FiT-M5-BwP"/>
+                                    <segue destination="xgZ-x9-Kzd" kind="modal" id="yim-Tq-slL"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qDk-Vu-BfU">
@@ -95,12 +95,12 @@
                         <sections>
                             <tableViewSection id="YdF-lF-oBS">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="cQP-Te-hxe" style="IBUITableViewCellStyleDefault" id="DMt-iX-PLn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cQP-Te-hxe" style="IBUITableViewCellStyleDefault" id="DMt-iX-PLn">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DMt-iX-PLn" id="QZd-3X-o3U">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cQP-Te-hxe">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Cool Person" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cQP-Te-hxe">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -108,6 +108,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xgZ-x9-Kzd" kind="push" id="VXz-zY-5ZS"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="WvS-Wh-r7D" style="IBUITableViewCellStyleDefault" id="OI7-SO-J4V">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -191,6 +194,41 @@
                 <exit id="kWw-j7-kkA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2026" y="-57"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="huE-Pf-LMQ">
+            <objects>
+                <viewController id="xgZ-x9-Kzd" customClass="postViewController" customModule="MedLight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n8B-tI-z9r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dMr-Xj-ArQ">
+                                <rect key="frame" x="27" y="269" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.15664450026685561" green="1" blue="0.06025934120432197" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Choose Image">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseImage:" destination="xgZ-x9-Kzd" eventType="touchUpInside" id="k2t-GC-57p"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="315px-Blank_woman_placeholder.png" id="qL3-Of-0sk">
+                                <rect key="frame" x="16" y="108" width="122" height="115"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XQk-GN-C88"/>
+                    <connections>
+                        <outlet property="imageToPost" destination="qL3-Of-0sk" id="xSF-nF-Wji"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAb-lc-kHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528" y="649"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Xjo-sO-iOZ">
@@ -527,9 +565,15 @@
             <point key="canvasLocation" x="9" y="137"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="315px-Blank_woman_placeholder.png" width="315" height="315"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="yim-Tq-slL"/>
+    </inferredMetricsTieBreakers>
 </document>
