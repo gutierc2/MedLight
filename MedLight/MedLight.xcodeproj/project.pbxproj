@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */; };
+		029EFCF81A12DDE1008D0F87 /* NewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */; };
+		029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */; };
 		74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6051A0AD5F400247456 /* AppDelegate.swift */; };
 		74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6071A0AD5F400247456 /* ViewController.swift */; };
 		74C5F60B1A0AD5F400247456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F6091A0AD5F400247456 /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotepadViewController.swift; sourceTree = "<group>"; };
+		029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedViewController.swift; sourceTree = "<group>"; };
+		029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		74C5F6001A0AD5F400247456 /* MedLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C5F6041A0AD5F400247456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C5F6051A0AD5F400247456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,8 +83,11 @@
 		74C5F6021A0AD5F400247456 /* MedLight */ = {
 			isa = PBXGroup;
 			children = (
+				029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */,
+				029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */,
 				74C5F6051A0AD5F400247456 /* AppDelegate.swift */,
 				74C5F6071A0AD5F400247456 /* ViewController.swift */,
+				029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */,
 				74C5F6091A0AD5F400247456 /* Main.storyboard */,
 				74C5F60C1A0AD5F400247456 /* Images.xcassets */,
 				74C5F60E1A0AD5F400247456 /* LaunchScreen.xib */,
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */,
+				029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */,
 				74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */,
 				74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */,
+				029EFCF81A12DDE1008D0F87 /* NewsfeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
