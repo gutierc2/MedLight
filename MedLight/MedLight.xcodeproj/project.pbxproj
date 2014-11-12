@@ -7,32 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */; };
 		029EFCF81A12DDE1008D0F87 /* NewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */; };
 		029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */; };
-=======
-		7427BDBD1A12BBF700F242A3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDB31A12BBF700F242A3 /* AudioToolbox.framework */; };
-		7427BDBE1A12BBF700F242A3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDB41A12BBF700F242A3 /* CFNetwork.framework */; };
-		7427BDBF1A12BBF700F242A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDB51A12BBF700F242A3 /* CoreGraphics.framework */; };
-		7427BDC01A12BBF700F242A3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDB61A12BBF700F242A3 /* CoreLocation.framework */; };
-		7427BDC11A12BBF700F242A3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDB71A12BBF700F242A3 /* libz.dylib */; };
-		7427BDC21A12BBF700F242A3 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDB81A12BBF700F242A3 /* MobileCoreServices.framework */; };
-		7427BDC31A12BBF700F242A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDB91A12BBF700F242A3 /* QuartzCore.framework */; };
-		7427BDC41A12BBF700F242A3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDBA1A12BBF700F242A3 /* Security.framework */; };
-		7427BDC51A12BBF700F242A3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDBB1A12BBF700F242A3 /* StoreKit.framework */; };
-		7427BDC61A12BBF700F242A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7427BDBC1A12BBF700F242A3 /* SystemConfiguration.framework */; };
-		74A0665E1A12BF6900384AAC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A0665C1A12BF6900384AAC /* Bolts.framework */; };
-		74A0665F1A12BF6900384AAC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A0665D1A12BF6900384AAC /* Parse.framework */; };
-		74A066661A12C86800384AAC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A066651A12C86800384AAC /* RegistrationViewController.swift */; };
-		74A066681A12D4E900384AAC /* DoctorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A066671A12D4E900384AAC /* DoctorLoginViewController.swift */; };
->>>>>>> Chris's-Branch
-=======
->>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
-=======
->>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 		74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6051A0AD5F400247456 /* AppDelegate.swift */; };
 		74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6071A0AD5F400247456 /* ViewController.swift */; };
 		74C5F60B1A0AD5F400247456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F6091A0AD5F400247456 /* Main.storyboard */; };
@@ -52,33 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 		029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotepadViewController.swift; sourceTree = "<group>"; };
 		029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedViewController.swift; sourceTree = "<group>"; };
 		029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
-=======
-		7427BDB31A12BBF700F242A3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		7427BDB41A12BBF700F242A3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		7427BDB51A12BBF700F242A3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7427BDB61A12BBF700F242A3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		7427BDB71A12BBF700F242A3 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		7427BDB81A12BBF700F242A3 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		7427BDB91A12BBF700F242A3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7427BDBA1A12BBF700F242A3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		7427BDBB1A12BBF700F242A3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		7427BDBC1A12BBF700F242A3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		74A0665C1A12BF6900384AAC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		74A0665D1A12BF6900384AAC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		74A066621A12C39400384AAC /* MedLight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedLight-Bridging-Header.h"; sourceTree = "<group>"; };
-		74A066651A12C86800384AAC /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		74A066671A12D4E900384AAC /* DoctorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorLoginViewController.swift; sourceTree = "<group>"; };
->>>>>>> Chris's-Branch
-=======
->>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
-=======
->>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 		74C5F6001A0AD5F400247456 /* MedLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C5F6041A0AD5F400247456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C5F6051A0AD5F400247456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,18 +49,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7427BDBD1A12BBF700F242A3 /* AudioToolbox.framework in Frameworks */,
-				7427BDBE1A12BBF700F242A3 /* CFNetwork.framework in Frameworks */,
-				7427BDBF1A12BBF700F242A3 /* CoreGraphics.framework in Frameworks */,
-				7427BDC01A12BBF700F242A3 /* CoreLocation.framework in Frameworks */,
-				7427BDC11A12BBF700F242A3 /* libz.dylib in Frameworks */,
-				7427BDC21A12BBF700F242A3 /* MobileCoreServices.framework in Frameworks */,
-				7427BDC31A12BBF700F242A3 /* QuartzCore.framework in Frameworks */,
-				7427BDC41A12BBF700F242A3 /* Security.framework in Frameworks */,
-				74A0665E1A12BF6900384AAC /* Bolts.framework in Frameworks */,
-				7427BDC51A12BBF700F242A3 /* StoreKit.framework in Frameworks */,
-				74A0665F1A12BF6900384AAC /* Parse.framework in Frameworks */,
-				7427BDC61A12BBF700F242A3 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,22 +65,9 @@
 		74C5F5F71A0AD5F400247456 = {
 			isa = PBXGroup;
 			children = (
-				74A0665C1A12BF6900384AAC /* Bolts.framework */,
-				74A0665D1A12BF6900384AAC /* Parse.framework */,
-				7427BDB31A12BBF700F242A3 /* AudioToolbox.framework */,
-				7427BDB41A12BBF700F242A3 /* CFNetwork.framework */,
-				7427BDB51A12BBF700F242A3 /* CoreGraphics.framework */,
-				7427BDB61A12BBF700F242A3 /* CoreLocation.framework */,
-				7427BDB71A12BBF700F242A3 /* libz.dylib */,
-				7427BDB81A12BBF700F242A3 /* MobileCoreServices.framework */,
-				7427BDB91A12BBF700F242A3 /* QuartzCore.framework */,
-				7427BDBA1A12BBF700F242A3 /* Security.framework */,
-				7427BDBB1A12BBF700F242A3 /* StoreKit.framework */,
-				7427BDBC1A12BBF700F242A3 /* SystemConfiguration.framework */,
 				74C5F6021A0AD5F400247456 /* MedLight */,
 				74C5F6181A0AD5F400247456 /* MedLightTests */,
 				74C5F6011A0AD5F400247456 /* Products */,
-				74A066621A12C39400384AAC /* MedLight-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,11 +83,12 @@
 		74C5F6021A0AD5F400247456 /* MedLight */ = {
 			isa = PBXGroup;
 			children = (
+				029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */,
+				029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */,
 				74C5F6051A0AD5F400247456 /* AppDelegate.swift */,
 				74C5F6071A0AD5F400247456 /* ViewController.swift */,
+				029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */,
 				74C5F6091A0AD5F400247456 /* Main.storyboard */,
-				74A066671A12D4E900384AAC /* DoctorLoginViewController.swift */,
-				74A066651A12C86800384AAC /* RegistrationViewController.swift */,
 				74C5F60C1A0AD5F400247456 /* Images.xcassets */,
 				74C5F60E1A0AD5F400247456 /* LaunchScreen.xib */,
 				74C5F6031A0AD5F400247456 /* Supporting Files */,
@@ -292,21 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 				029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */,
 				029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */,
-=======
-				74A066661A12C86800384AAC /* RegistrationViewController.swift in Sources */,
-				74A066681A12D4E900384AAC /* DoctorLoginViewController.swift in Sources */,
->>>>>>> Chris's-Branch
-=======
->>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
-=======
->>>>>>> parent of d0880e2... Merge branch 'Bryce's-Branch-2'
 				74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */,
 				74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */,
+				029EFCF81A12DDE1008D0F87 /* NewsfeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,18 +348,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/christophergutierrez/Documents/parse-library-1.5.0",
-					"$(PROJECT_DIR)/MedLight",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = MedLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MedLight-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -448,17 +358,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/christophergutierrez/Documents/parse-library-1.5.0",
-					"$(PROJECT_DIR)/MedLight",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = MedLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MedLight-Bridging-Header.h";
 			};
 			name = Release;
 		};
