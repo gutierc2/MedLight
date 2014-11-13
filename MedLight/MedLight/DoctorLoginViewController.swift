@@ -25,7 +25,7 @@ class DoctorLoginViewController: UIViewController, UITextFieldDelegate {
             
         }))
         
-        self.presentViewController(alert, animated: true, completion: nil)
+        presentViewController(alert, animated: true, completion: nil)
         
     }
     
