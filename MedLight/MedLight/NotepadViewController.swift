@@ -14,9 +14,10 @@ class NotepadViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if (NSUserDefaults.standardUserDefaults().objectForKey("myNotes") != nil) {
         // Do any additional setup after loading the view.
             notes.text = NSUserDefaults.standardUserDefaults().objectForKey("myNotes")! as String
+        }
         
     }
 
