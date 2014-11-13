@@ -9,7 +9,7 @@
 import UIKit
 
 
-var toDoItems:[String] = []
+var toDoFeed:[[String]] = []
 
 
 
@@ -24,7 +24,9 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.        
+        // Do any additional setup after loading the view, typically from a nib. 
+        
+        println(toDoFeed)
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +36,7 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
 
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         
-        return toDoItems.count
+        return toDoFeed.count
         
     }
     
@@ -45,7 +47,7 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
         
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
-        cell.textLabel.text = toDoItems[indexPath.row]
+        cell.textLabel.text = toDoFeed[indexPath.row][1]+" "+toDoFeed[indexPath.row][0]
         
         return cell
         
@@ -54,13 +56,13 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
     
     override func viewWillAppear(animated: Bool) {
         
-        if var storedtoDoItems : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("toDoItems") {
+        if var storedtoDoFeed : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("toDoFeed") {
             
-            toDoItems = []
+            toDoFeed = []
             
-            for var i = storedtoDoItems.count as Int; i > 0; --i {
+            for var i = storedtoDoFeed.count as Int; i > 0; --i {
                 
-                toDoItems.append(storedtoDoItems[i-1] as NSString)
+                toDoFeed.append([storedtoDoFeed[i-1][0] as NSString, storedtoDoFeed[i-1][1] as NSString])
                 
             }
             
@@ -72,14 +74,33 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
         
     }
     
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+
+        if toDoFeed[indexPath.row][1] == "💛" {
+            toDoFeed[indexPath.row][1] = "💚"
+        } else if toDoFeed[indexPath.row][1] == "💚" {
+            toDoFeed[indexPath.row][1] = "❤️"
+        } else {
+            toDoFeed[indexPath.row][1] = "💛"
+        }
+
+        
+        let fixedtoDoFeed = toDoFeed
+        NSUserDefaults.standardUserDefaults().setObject(fixedtoDoFeed, forKey: "toDoFeed")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        tasksTable.reloadData()
+
+    }
+    
     func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
         
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             
-            toDoItems.removeAtIndex(indexPath.row)
+            toDoFeed.removeAtIndex(indexPath.row)
             
-            let fixedtoDoItems = toDoItems
-            NSUserDefaults.standardUserDefaults().setObject(fixedtoDoItems, forKey: "toDoItems")
+            let fixedtoDoFeed = toDoFeed
+            NSUserDefaults.standardUserDefaults().setObject(fixedtoDoFeed, forKey: "toDoFeed")
             NSUserDefaults.standardUserDefaults().synchronize()
             
             tasksTable.reloadData()

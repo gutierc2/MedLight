@@ -15,10 +15,10 @@ class AddPostViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func addItem(sender : AnyObject) {
         
-        toDoItems.append(toDoItem.text)
+        toDoFeed.append([toDoItem.text, "💛"])
         
-        let fixedtoDoItems = toDoItems
-        NSUserDefaults.standardUserDefaults().setObject(fixedtoDoItems, forKey: "toDoItems")
+        let fixedtoDoFeed = toDoFeed
+        NSUserDefaults.standardUserDefaults().setObject(fixedtoDoFeed, forKey: "toDoFeed")
         NSUserDefaults.standardUserDefaults().synchronize()
         
         self.view.endEditing(true)
