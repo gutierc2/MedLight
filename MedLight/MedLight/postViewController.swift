@@ -29,9 +29,9 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     @IBOutlet var imageToPost: UIImageView!
     
-    @IBOutlet var name: UITextField!
+    @IBOutlet var fullName: UITextField!
     
-    @IBOutlet var MRN: UITextField!
+    @IBOutlet var mrn: UITextField!
     
     @IBOutlet var notes: UITextView!
     
@@ -61,11 +61,11 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
             
             error = "Please select an image for the patient."
             
-        } else if (name.text == "") {
+        } else if (fullName.text == "") {
             
             error = "Please enter a name for the patient."
         
-        } else if (MRN.text == "") {
+        } else if (mrn.text == "") {
             
             error = "Please enter in a MRN for the patient."
             
@@ -84,12 +84,17 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
             activityIndicator.startAnimating()
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
-            var patient = PFObject(className: "Post")
+            var patient = PFObject(className: "Patient")
             
-            patient["username"] = PFUser.currentUser().username
-            patient["name"] = name.text
-            patient["MRN"] = MRN.text
+            var user = PFUser.currentUser()
+            
+            patient["doctors"].appendString(user.username)
+            patient["fullName"] = fullName.text
+            patient["mrn"] = mrn.text
             patient["notes"] = notes.text
+            patient["newsfeed"] = []
+            
+            user["patients"].appendString(mrn.text)
             
             patient.saveInBackgroundWithBlock{(success: Bool!, error: NSError!) -> Void in
                 
@@ -124,8 +129,8 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
                             
                             self.imageToPost.image = UIImage(named: "315px-Blank_woman_placeholder.png")
                             
-                            self.name.text = ""
-                            self.MRN.text = ""
+                            self.fullName.text = ""
+                            self.mrn.text = ""
                             self.notes.text = ""
                             
                         }
@@ -147,8 +152,8 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         imageToPost.image = UIImage(named: "315px-Blank_woman_placeholder.png")
         
-        name.text = ""
-        MRN.text = ""
+        fullName.text = ""
+        mrn.text = ""
         notes.text = ""
         
     }

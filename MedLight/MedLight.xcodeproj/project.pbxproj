@@ -30,8 +30,9 @@
 		74C5F60D1A0AD5F400247456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F60C1A0AD5F400247456 /* Images.xcassets */; };
 		74C5F6101A0AD5F400247456 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F60E1A0AD5F400247456 /* LaunchScreen.xib */; };
 		74C5F61C1A0AD5F400247456 /* MedLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F61B1A0AD5F400247456 /* MedLightTests.swift */; };
+		ED7C80B11A15769F002B2874 /* 315px-Blank_woman_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */; };
+		ED7C80B31A1584A1002B2874 /* PatientListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */; };
 		EDEEDAF01A15419B00032661 /* postViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDAEF1A15419B00032661 /* postViewController.swift */; };
-		EDEEDAF21A15451300032661 /* 315px-Blank_woman_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = EDEEDAF11A15451300032661 /* 315px-Blank_woman_placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +74,9 @@
 		74C5F6151A0AD5F400247456 /* MedLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C5F61A1A0AD5F400247456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C5F61B1A0AD5F400247456 /* MedLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedLightTests.swift; sourceTree = "<group>"; };
+		ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "315px-Blank_woman_placeholder.png"; sourceTree = "<group>"; };
+		ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListTableViewController.swift; sourceTree = "<group>"; };
 		EDEEDAEF1A15419B00032661 /* postViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postViewController.swift; sourceTree = "<group>"; };
-		EDEEDAF11A15451300032661 /* 315px-Blank_woman_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "315px-Blank_woman_placeholder.png"; path = "../../../Documents/315px-Blank_woman_placeholder.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,10 +147,11 @@
 				029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */,
 				74C5F6051A0AD5F400247456 /* AppDelegate.swift */,
 				74C5F6071A0AD5F400247456 /* ViewController.swift */,
-				EDEEDAF11A15451300032661 /* 315px-Blank_woman_placeholder.png */,
+				ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */,
 				EDEEDAEF1A15419B00032661 /* postViewController.swift */,
 				029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */,
 				74C5F6091A0AD5F400247456 /* Main.storyboard */,
+				ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */,
 				740160FA1A146FF60028092D /* DoctorLoginViewController.swift */,
 				740160DD1A146D1C0028092D /* RegistrationViewController.swift */,
 				74C5F60C1A0AD5F400247456 /* Images.xcassets */,
@@ -267,7 +270,7 @@
 				74C5F60B1A0AD5F400247456 /* Main.storyboard in Resources */,
 				74C5F6101A0AD5F400247456 /* LaunchScreen.xib in Resources */,
 				74C5F60D1A0AD5F400247456 /* Images.xcassets in Resources */,
-				EDEEDAF21A15451300032661 /* 315px-Blank_woman_placeholder.png in Resources */,
+				ED7C80B11A15769F002B2874 /* 315px-Blank_woman_placeholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +291,7 @@
 				EDEEDAF01A15419B00032661 /* postViewController.swift in Sources */,
 				740160FB1A146FF60028092D /* DoctorLoginViewController.swift in Sources */,
 				740160DE1A146D1C0028092D /* RegistrationViewController.swift in Sources */,
+				ED7C80B31A1584A1002B2874 /* PatientListTableViewController.swift in Sources */,
 				029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */,
 				029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */,
 				74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */,
