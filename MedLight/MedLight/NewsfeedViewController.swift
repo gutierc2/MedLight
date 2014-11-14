@@ -25,8 +25,6 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib. 
-        
-        println(toDoFeed)
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,6 +46,8 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
         cell.textLabel.text = toDoFeed[indexPath.row][1]+" "+toDoFeed[indexPath.row][0]
+        
+        println(toDoFeed)
         
         return cell
         
