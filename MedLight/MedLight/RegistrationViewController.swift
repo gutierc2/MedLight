@@ -29,11 +29,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     func displayAlert(title:String, error:String) {
         
         var alert = UIAlertController(title: title, message: error, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
-            
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
-        }))
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         
         self.presentViewController(alert, animated: true, completion: nil)
         

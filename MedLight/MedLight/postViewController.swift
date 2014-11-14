@@ -8,22 +8,20 @@
 
 import UIKit
 
-class postViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class postViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     func displayAlert(title:String, error:String) {
         
         var alert = UIAlertController(title: title, message: error, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
-            
-            self.dismissViewControllerAnimated(true, completion: nil)
-            
-        }))
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
         
         presentViewController(alert, animated: true, completion: nil)
         
     }
+    
+    
     
     var photoSelected:Bool = false
     
@@ -34,6 +32,17 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet var mrn: UITextField!
     
     @IBOutlet var notes: UITextView!
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        fullName.resignFirstResponder()
+        mrn.resignFirstResponder()
+        notes.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         println("Image selected")
