@@ -97,15 +97,27 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
             
             var user = PFUser.currentUser()
             
-            patient["doctors"].appendString(user.username)
+            if patient["doctors"] == nil
+            {
+                patient["doctors"] = []
+            }
+            
+            patient.addObject(user["email"] as String, forKey: "doctors")
+    
             patient["fullName"] = fullName.text
             patient["mrn"] = mrn.text
             patient["notes"] = notes.text
-            patient["newsfeed"] = []
             
-            user["patients"].appendString(mrn.text)
+            if patient["newsfeed"] == nil
+            {
+                patient["newsfeed"] = []
+            }
+            
+            user.addObject(mrn.text, forKey: "patients")
             
             patient.saveInBackgroundWithBlock{(success: Bool!, error: NSError!) -> Void in
+                
+                user.save()
                 
                 self.activityIndicator.stopAnimating()
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()

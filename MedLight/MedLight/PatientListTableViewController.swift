@@ -8,11 +8,14 @@
 
 import UIKit
 
+
 class PatientListTableViewController: UITableViewController {
 
     @IBOutlet var patientTable: UITableView!
     
     var user = PFUser.currentUser()
+    
+    var patients: [String] = []
     
     
     override func viewDidLoad() {
@@ -23,12 +26,28 @@ class PatientListTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        
+        cell.textLabel.text = patients[indexPath.row]
+        
+        return cell
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         
         
+        var storedPatientList : [String] = user["patients"] as [String]
+        patients = []
+        for i in storedPatientList
+        {
+            patients.append(i)
+        }
+        println(patients)
         
-        
-        
+        patientTable.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +67,6 @@ class PatientListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        let patients = user["patients"] as [String]
         return patients.count
     }
 

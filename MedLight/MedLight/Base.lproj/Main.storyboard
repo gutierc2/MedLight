@@ -450,15 +450,6 @@
                                 <rect key="frame" x="85" y="64" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="me@medlight.com" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="nMe-C0-zW6">
-                                <rect key="frame" x="60" y="269" width="201" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Csk-Y8-CtH" id="7Ng-vZ-ZEC"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="thisismypassword" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="TZa-8S-Ttg">
                                 <rect key="frame" x="60" y="307" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -466,6 +457,15 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="Csk-Y8-CtH" id="UEo-v3-PjH"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="you@medlight.com" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="nMe-C0-zW6">
+                                <rect key="frame" x="61" y="269" width="201" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Csk-Y8-CtH" id="7Ng-vZ-ZEC"/>
                                 </connections>
                             </textField>
                         </subviews>
