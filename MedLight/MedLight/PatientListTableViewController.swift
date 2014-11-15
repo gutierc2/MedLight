@@ -8,7 +8,7 @@
 
 import UIKit
 
-
+var currentPatient : PFObject? = nil
 
 class PatientListTableViewController: UITableViewController {
 
@@ -29,10 +29,16 @@ class PatientListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        var cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
-        cell.textLabel.text = patients[indexPath.row]
         
+        var query = PFQuery(className: "Patient")
+        query.whereKey("hospital", equalTo: user["hospital"] as String)
+        query.whereKey("mrn", equalTo: patients[indexPath.row])
+        var p = query.findObjects()[0] as PFObject
+        
+        cell.textLabel.text = p["fullName"] as String
+        cell.detailTextLabel!.text = (p["notes"] as String) + " (MRN:" + (p["mrn"] as String) + ")"
         return cell
     }
     
@@ -69,6 +75,16 @@ class PatientListTableViewController: UITableViewController {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return patients.count
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var query = PFQuery(className: "Patient")
+        query.whereKey("hospital", equalTo: user["hospital"] as String)
+        query.whereKey("mrn", equalTo: patients[indexPath.row])
+        currentPatient = query.findObjects()[0] as PFObject
+        println(currentPatient)
+
+        self.performSegueWithIdentifier("viewPatientFeed", sender: nil)
     }
 
     /*

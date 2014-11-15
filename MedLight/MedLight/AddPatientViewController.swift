@@ -8,7 +8,7 @@
 
 import UIKit
 
-class postViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+class AddPatientViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -23,7 +23,6 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     
     
-    var photoSelected:Bool = false
     
     @IBOutlet var imageToPost: UIImageView!
     
@@ -31,7 +30,7 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     @IBOutlet var mrn: UITextField!
     
-    @IBOutlet var notes: UITextView!
+    @IBOutlet var notes: UITextField!
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         fullName.resignFirstResponder()
@@ -50,14 +49,13 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         imageToPost.image = image
         
-        photoSelected = true
         
     }
     
     @IBAction func chooseImage(sender: AnyObject) {
         var image = UIImagePickerController()
         image.delegate = self
-        image.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        image.sourceType = UIImagePickerControllerSourceType.Camera
         image.allowsEditing = false
         self.presentViewController(image, animated: true, completion: nil)
     }
@@ -66,17 +64,17 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         var error = ""
         
-        if (photoSelected == false) {
-            
-            error = "Please select an image for the patient."
-            
-        } else if (fullName.text == "") {
+        if (fullName.text == "") {
             
             error = "Please enter a name for the patient."
         
         } else if (mrn.text == "") {
             
             error = "Please enter in a MRN for the patient."
+            
+        } else if (notes.text == "") {
+            
+            error = "Please enter a chief complaint."
             
         }
         if (error != "") {
@@ -107,6 +105,7 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
             patient["fullName"] = fullName.text
             patient["mrn"] = mrn.text
             patient["notes"] = notes.text
+            patient["hospital"] = user["hospital"] as String
             
             if patient["newsfeed"] == nil
             {
@@ -144,9 +143,7 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
                             self.displayAlert("Could Not Add Patient", error: "Please try again later")
                         } else {
                             
-                            //self.displayAlert("Patient Added!", error : "The patient has been added successfully.")
-                            
-                            self.photoSelected = false
+                            self.displayAlert("Patient Added!", error : "The patient has been added successfully.")
                             
                             self.imageToPost.image = UIImage(named: "315px-Blank_woman_placeholder.png")
                             
@@ -168,8 +165,6 @@ class postViewController: UIViewController, UINavigationControllerDelegate, UIIm
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        photoSelected = false
         
         imageToPost.image = UIImage(named: "315px-Blank_woman_placeholder.png")
         

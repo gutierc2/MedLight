@@ -34,22 +34,23 @@
                     </navigationItem>
                     <connections>
                         <outlet property="patientTable" destination="rFJ-T5-uxl" id="5kH-rr-Xyz"/>
+                        <segue destination="ggL-bS-5mO" kind="push" identifier="viewPatientFeed" id="2R1-Mc-IKh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9j-R1-3SH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="891" y="569"/>
+            <point key="canvasLocation" x="929" y="558"/>
         </scene>
         <!--Add Patient-->
         <scene sceneID="ldW-if-EBy">
             <objects>
-                <viewController title="Add Patient" id="BTl-un-3UK" customClass="postViewController" customModule="MedLight" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Patient" id="BTl-un-3UK" customClass="AddPatientViewController" customModule="MedLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l7D-0I-XSV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Patient Name" minimumFontSize="17" id="klx-tf-tIP">
-                                <rect key="frame" x="16" y="246" width="288" height="30"/>
+                                <rect key="frame" x="16" y="222" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -58,7 +59,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medical Record Number (MRN)" minimumFontSize="17" id="lBd-Fd-J6N">
-                                <rect key="frame" x="16" y="284" width="288" height="30"/>
+                                <rect key="frame" x="16" y="260" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -66,15 +67,8 @@
                                     <outlet property="delegate" destination="BTl-un-3UK" id="bny-HQ-tmC"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Notes Regarding Condition:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zQe-Q3-T09">
-                                <rect key="frame" x="16" y="322" width="213" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5AS-Ez-Tgp">
-                                <rect key="frame" x="99" y="178" width="122" height="30"/>
+                                <rect key="frame" x="99" y="184" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose An Image">
                                     <color key="titleColor" red="0.15664450029999999" green="1" blue="0.060259341199999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,11 +79,17 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="315px-Blank_woman_placeholder.png" id="eRn-Ca-104">
-                                <rect key="frame" x="106" y="70" width="109" height="100"/>
+                                <rect key="frame" x="106" y="76" width="109" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chief Complaint" minimumFontSize="17" id="72p-RP-WEU">
+                                <rect key="frame" x="16" y="298" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2a9-ce-Vqw">
-                                <rect key="frame" x="120" y="216" width="81" height="30"/>
+                                <rect key="frame" x="120" y="336" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Patient">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -98,30 +98,19 @@
                                     <action selector="postImage:" destination="BTl-un-3UK" eventType="touchUpInside" id="L8S-R3-zBO"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6PQ-cc-oFM">
-                                <rect key="frame" x="16" y="351" width="288" height="158"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BTl-un-3UK" id="QUz-Ab-G5j"/>
-                                </connections>
-                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Patient" id="MBE-uT-xbH"/>
                     <connections>
                         <outlet property="fullName" destination="klx-tf-tIP" id="oOV-pq-Csq"/>
                         <outlet property="imageToPost" destination="eRn-Ca-104" id="zvt-1t-O0o"/>
                         <outlet property="mrn" destination="lBd-Fd-J6N" id="8Ty-39-BpY"/>
-                        <outlet property="notes" destination="6PQ-cc-oFM" id="lKV-of-77c"/>
+                        <outlet property="notes" destination="72p-RP-WEU" id="4Hb-C4-mix"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gfT-xf-W8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1349" y="700"/>
+            <point key="canvasLocation" x="1415" y="848"/>
         </scene>
         <!--Notepad View Controller-->
         <scene sceneID="Da0-f6-1Kt">
@@ -256,9 +245,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="ggL-bS-5mO" kind="push" id="kMA-Hg-UIV"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fKA-cj-crD" style="IBUITableViewCellStyleDefault" id="ZIz-6h-e58">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

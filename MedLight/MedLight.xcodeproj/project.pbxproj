@@ -32,7 +32,7 @@
 		74C5F61C1A0AD5F400247456 /* MedLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F61B1A0AD5F400247456 /* MedLightTests.swift */; };
 		ED7C80B11A15769F002B2874 /* 315px-Blank_woman_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */; };
 		ED7C80B31A1584A1002B2874 /* PatientListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */; };
-		EDEEDAF01A15419B00032661 /* postViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDAEF1A15419B00032661 /* postViewController.swift */; };
+		EDEEDAF01A15419B00032661 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDAEF1A15419B00032661 /* AddPatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +76,7 @@
 		74C5F61B1A0AD5F400247456 /* MedLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedLightTests.swift; sourceTree = "<group>"; };
 		ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "315px-Blank_woman_placeholder.png"; sourceTree = "<group>"; };
 		ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListTableViewController.swift; sourceTree = "<group>"; };
-		EDEEDAEF1A15419B00032661 /* postViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postViewController.swift; sourceTree = "<group>"; };
+		EDEEDAEF1A15419B00032661 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +148,7 @@
 				74C5F6051A0AD5F400247456 /* AppDelegate.swift */,
 				74C5F6071A0AD5F400247456 /* ViewController.swift */,
 				ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */,
-				EDEEDAEF1A15419B00032661 /* postViewController.swift */,
+				EDEEDAEF1A15419B00032661 /* AddPatientViewController.swift */,
 				029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */,
 				74C5F6091A0AD5F400247456 /* Main.storyboard */,
 				ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */,
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDEEDAF01A15419B00032661 /* postViewController.swift in Sources */,
+				EDEEDAF01A15419B00032661 /* AddPatientViewController.swift in Sources */,
 				740160FB1A146FF60028092D /* DoctorLoginViewController.swift in Sources */,
 				740160DE1A146D1C0028092D /* RegistrationViewController.swift in Sources */,
 				ED7C80B31A1584A1002B2874 /* PatientListTableViewController.swift in Sources */,

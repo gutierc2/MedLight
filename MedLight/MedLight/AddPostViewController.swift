@@ -14,12 +14,15 @@ class AddPostViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func addItem(sender : AnyObject) {
-        
-        toDoFeed.append([toDoItem.text, "💛"])
-        
+        currentPatient!.addObject([toDoItem.text, "✴️"], forKey: "newsfeed")
+        //toDoFeed.append([toDoItem.text, "✴️"])
+        /*
         let fixedtoDoFeed = toDoFeed
         NSUserDefaults.standardUserDefaults().setObject(fixedtoDoFeed, forKey: "toDoFeed")
         NSUserDefaults.standardUserDefaults().synchronize()
+        */
+        
+        currentPatient!.save()
         
         self.view.endEditing(true)
         self.navigationController?.popViewControllerAnimated(true)
@@ -42,7 +45,7 @@ class AddPostViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         
         self.view.endEditing(true)
         

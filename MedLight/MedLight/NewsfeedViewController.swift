@@ -55,7 +55,7 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        
+        /*
         if var storedtoDoFeed : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("toDoFeed") {
             
             toDoFeed = []
@@ -68,7 +68,8 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
             
             
         }
-        
+        */
+        toDoFeed = reverse(currentPatient!["newsfeed"] as [[String]])
         
         tasksTable.reloadData()
         
@@ -76,19 +77,20 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
 
-        if toDoFeed[indexPath.row][1] == "💛" {
-            toDoFeed[indexPath.row][1] = "💚"
-        } else if toDoFeed[indexPath.row][1] == "💚" {
-            toDoFeed[indexPath.row][1] = "❤️"
+        if toDoFeed[indexPath.row][1] == "✴️" {
+            toDoFeed[indexPath.row][1] = "✅"
+        } else if toDoFeed[indexPath.row][1] == "✅" {
+            toDoFeed[indexPath.row][1] = "🅾"
         } else {
-            toDoFeed[indexPath.row][1] = "💛"
+            toDoFeed[indexPath.row][1] = "✴️"
         }
 
         
-        let fixedtoDoFeed = toDoFeed
-        NSUserDefaults.standardUserDefaults().setObject(fixedtoDoFeed, forKey: "toDoFeed")
-        NSUserDefaults.standardUserDefaults().synchronize()
-        
+        //let fixedtoDoFeed = toDoFeed
+        //NSUserDefaults.standardUserDefaults().setObject(fixedtoDoFeed, forKey: "toDoFeed")
+        //NSUserDefaults.standardUserDefaults().synchronize()
+        currentPatient!["newsfeed"] = reverse(toDoFeed)
+        currentPatient!.save()
         tasksTable.reloadData()
 
     }
@@ -99,10 +101,11 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
             
             toDoFeed.removeAtIndex(indexPath.row)
             
-            let fixedtoDoFeed = toDoFeed
-            NSUserDefaults.standardUserDefaults().setObject(fixedtoDoFeed, forKey: "toDoFeed")
-            NSUserDefaults.standardUserDefaults().synchronize()
-            
+            //let fixedtoDoFeed = toDoFeed
+            //NSUserDefaults.standardUserDefaults().setObject(fixedtoDoFeed, forKey: "toDoFeed")
+            //NSUserDefaults.standardUserDefaults().synchronize()
+            currentPatient!["newsfeed"] = reverse(toDoFeed)
+            currentPatient!.save()
             tasksTable.reloadData()
             
         }
