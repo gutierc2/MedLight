@@ -24,6 +24,7 @@
 		740160F51A146DFB0028092D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740160F31A146DFB0028092D /* StoreKit.framework */; };
 		740160F61A146DFB0028092D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740160F41A146DFB0028092D /* SystemConfiguration.framework */; };
 		740160FB1A146FF60028092D /* DoctorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740160FA1A146FF60028092D /* DoctorLoginViewController.swift */; };
+		74A1B2E91A1743270048BD8A /* PatientLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A1B2E81A1743270048BD8A /* PatientLoginViewController.swift */; };
 		74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6051A0AD5F400247456 /* AppDelegate.swift */; };
 		74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F6071A0AD5F400247456 /* ViewController.swift */; };
 		74C5F60B1A0AD5F400247456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F6091A0AD5F400247456 /* Main.storyboard */; };
@@ -64,6 +65,7 @@
 		740160F41A146DFB0028092D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		740160F71A146E300028092D /* MedLight-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MedLight-Bridging-Header.h"; sourceTree = "<group>"; };
 		740160FA1A146FF60028092D /* DoctorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorLoginViewController.swift; sourceTree = "<group>"; };
+		74A1B2E81A1743270048BD8A /* PatientLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientLoginViewController.swift; sourceTree = "<group>"; };
 		74C5F6001A0AD5F400247456 /* MedLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C5F6041A0AD5F400247456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C5F6051A0AD5F400247456 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				EDEEDAEF1A15419B00032661 /* AddPatientViewController.swift */,
 				029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */,
 				74C5F6091A0AD5F400247456 /* Main.storyboard */,
+				74A1B2E81A1743270048BD8A /* PatientLoginViewController.swift */,
 				ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */,
 				740160FA1A146FF60028092D /* DoctorLoginViewController.swift */,
 				740160DD1A146D1C0028092D /* RegistrationViewController.swift */,
@@ -290,6 +293,7 @@
 			files = (
 				EDEEDAF01A15419B00032661 /* AddPatientViewController.swift in Sources */,
 				740160FB1A146FF60028092D /* DoctorLoginViewController.swift in Sources */,
+				74A1B2E91A1743270048BD8A /* PatientLoginViewController.swift in Sources */,
 				740160DE1A146D1C0028092D /* RegistrationViewController.swift in Sources */,
 				ED7C80B31A1584A1002B2874 /* PatientListTableViewController.swift in Sources */,
 				029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */,
