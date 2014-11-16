@@ -10,7 +10,6 @@ import UIKit
 
 class PatientLoginViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var fullName: UITextField!
     @IBOutlet weak var hospital: UITextField!
     @IBOutlet weak var mrn: UITextField!
     
@@ -29,9 +28,32 @@ class PatientLoginViewController: UIViewController, UITextFieldDelegate {
     {
         var error = ""
         
-        if (fullName.text == "" || hospital.text == "" || mrn.text == "")
+        var guy : [AnyObject]? = nil
+        
+        if (hospital.text == "" || mrn.text == "")
         {
             error = "Please complete all of the text fields."
+        }
+        else
+        {
+            var query = PFQuery(className: "Patient")
+            query.whereKey("hospital", equalTo: hospital.text)
+            
+            if (query.findObjects().count == 0)
+            {
+                error = "We do not yet have any patients at Hospital: \(hospital.text)"
+            }
+            else
+            {
+                query.whereKey("mrn", equalTo: mrn.text)
+                
+                guy = query.findObjects()
+                
+                if (guy!.count == 0)
+                {
+                    error = "No information for patient with MRN: \(mrn.text). Please try again later."
+                }
+            }
         }
         
         if (error != "")
@@ -48,32 +70,12 @@ class PatientLoginViewController: UIViewController, UITextFieldDelegate {
             activityIndicator.startAnimating()
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
-            var query = PFQuery(className: "Patient")
-            query.whereKey("hospital", equalTo: hospital.text)
-            query.whereKey("mrn", equalTo: mrn.text)
-            
-            var guy = query.findObjects()
-            
-            if (guy.count == 0)
-            {
-                var p = PFObject(className: "Patient")
-                p["fullName"] = fullName.text
-                p["hospital"] = hospital.text
-                p["mrn"] = mrn.text
-                p["doctors"] = []
-                p["newsfeed"] = []
-                p.save()
-                currentPatient = p
-            }
-            else
-            {
-                currentPatient = guy[0] as? PFObject
-            }
+            currentPatient = guy![0] as PFObject
             
             self.activityIndicator.stopAnimating()
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
             
-            // PERFORM SEGUE TO NEWSFEED HERE
+            self.performSegueWithIdentifier("patientLogIn", sender: UIButton())
         }
     
     }
@@ -89,7 +91,6 @@ class PatientLoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        fullName.resignFirstResponder()
         hospital.resignFirstResponder()
         mrn.resignFirstResponder()
         return true;

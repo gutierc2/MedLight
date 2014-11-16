@@ -37,7 +37,7 @@ class DoctorLoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        PFUser.logOut()
         // Do any additional setup after loading the view.
     }
     
