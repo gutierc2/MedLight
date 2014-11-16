@@ -90,7 +90,12 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
             user["phoneNumber"] = phoneNumber.text
             user["pagerNumber"] = pagerNumber.text
             user["patients"] = []
-            user["image"] = UIImage(named: "315px-Blank_woman_placeholder.png")
+            
+            let imageData = UIImagePNGRepresentation(UIImage(named: "315px-Blank_woman_placeholder.png"))
+            
+            let imageFile = PFFile(name: "image.png", data: imageData)
+            
+            user["imageFile"] = imageFile
             
             user.signUpInBackgroundWithBlock
                 {

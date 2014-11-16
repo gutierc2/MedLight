@@ -31,6 +31,8 @@
 		74C5F60D1A0AD5F400247456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F60C1A0AD5F400247456 /* Images.xcassets */; };
 		74C5F6101A0AD5F400247456 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74C5F60E1A0AD5F400247456 /* LaunchScreen.xib */; };
 		74C5F61C1A0AD5F400247456 /* MedLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C5F61B1A0AD5F400247456 /* MedLightTests.swift */; };
+		ED1FF79C1A18485200E54104 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF79B1A18485200E54104 /* EditProfileViewController.swift */; };
+		ED1FF79E1A1860B000E54104 /* DoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF79D1A1860B000E54104 /* DoctorProfileViewController.swift */; };
 		ED2A1C5B1A181F95005D9A2E /* DoctorListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A1C5A1A181F95005D9A2E /* DoctorListTableViewController.swift */; };
 		ED7C80B11A15769F002B2874 /* 315px-Blank_woman_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */; };
 		ED7C80B31A1584A1002B2874 /* PatientListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */; };
@@ -77,6 +79,8 @@
 		74C5F6151A0AD5F400247456 /* MedLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74C5F61A1A0AD5F400247456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74C5F61B1A0AD5F400247456 /* MedLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedLightTests.swift; sourceTree = "<group>"; };
+		ED1FF79B1A18485200E54104 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		ED1FF79D1A1860B000E54104 /* DoctorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorProfileViewController.swift; sourceTree = "<group>"; };
 		ED2A1C5A1A181F95005D9A2E /* DoctorListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorListTableViewController.swift; sourceTree = "<group>"; };
 		ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "315px-Blank_woman_placeholder.png"; sourceTree = "<group>"; };
 		ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListTableViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				EDEEDAEF1A15419B00032661 /* AddPatientViewController.swift */,
 				029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */,
 				74C5F6091A0AD5F400247456 /* Main.storyboard */,
+				ED1FF79D1A1860B000E54104 /* DoctorProfileViewController.swift */,
+				ED1FF79B1A18485200E54104 /* EditProfileViewController.swift */,
 				ED2A1C5A1A181F95005D9A2E /* DoctorListTableViewController.swift */,
 				74A1B2E81A1743270048BD8A /* PatientLoginViewController.swift */,
 				ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */,
@@ -299,9 +305,11 @@
 				740160FB1A146FF60028092D /* DoctorLoginViewController.swift in Sources */,
 				74A1B2E91A1743270048BD8A /* PatientLoginViewController.swift in Sources */,
 				740160DE1A146D1C0028092D /* RegistrationViewController.swift in Sources */,
+				ED1FF79E1A1860B000E54104 /* DoctorProfileViewController.swift in Sources */,
 				ED7C80B31A1584A1002B2874 /* PatientListTableViewController.swift in Sources */,
 				029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */,
 				029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */,
+				ED1FF79C1A18485200E54104 /* EditProfileViewController.swift in Sources */,
 				74C5F6081A0AD5F400247456 /* ViewController.swift in Sources */,
 				74C5F6061A0AD5F400247456 /* AppDelegate.swift in Sources */,
 				029EFCF81A12DDE1008D0F87 /* NewsfeedViewController.swift in Sources */,
