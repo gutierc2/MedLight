@@ -1,22 +1,17 @@
 //
-//  DoctorListTableViewController.swift
+//  PatientFeedTableViewController.swift
 //  MedLight
 //
-//  Created by Kay Lab on 11/15/14.
+//  Created by Bryce Tham on 11/15/14.
 //  Copyright (c) 2014 TeamOne. All rights reserved.
 //
 
 import UIKit
 
-var currentDoctor : PFObject? = nil
+class PatientFeedTableViewController: UITableViewController {
 
-class DoctorListTableViewController: UITableViewController {
+    @IBOutlet var tasksTable:UITableView!
 
-    
-    @IBOutlet var doctorTable: UITableView!
-    var doctors : [String] = []
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,29 +27,6 @@ class DoctorListTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        
-        var query = PFUser.query()
-        query.whereKey("email", equalTo: doctors[indexPath.row])
-        var d = query.findObjects()[0] as PFObject
-        
-        cell.textLabel.text = d["fullName"] as String
-        
-        return cell
-    }
-
-    override func viewWillAppear(animated: Bool) {
-        var storedDoctorList : [String] = currentPatient!["doctors"] as [String]
-        doctors = []
-        for i in storedDoctorList
-        {
-            doctors.append(i)
-        }
-        
-        doctorTable.reloadData()
-    }
-    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -66,29 +38,21 @@ class DoctorListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return doctors.count
+        return toDoFeed.count
+    }
+
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        
+        cell.textLabel.text = toDoFeed[indexPath.row][1]+" "+toDoFeed[indexPath.row][0]
+        cell.detailTextLabel!.text = toDoFeed[indexPath.row][2]+" @ "+toDoFeed[indexPath.row][3]
+        
+        
+        return cell
+
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("doctorlistdidselectrow")
-        var query = PFUser.query()
-        query.whereKey("email", equalTo: doctors[indexPath.row])
-        currentDoctor = query.findObjects()[0] as PFObject
-        
-        println("doctorlistdidselectrow2")
-        
-        self.performSegueWithIdentifier("doctorProfile", sender: nil)
-    }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -97,7 +61,25 @@ class DoctorListTableViewController: UITableViewController {
         return true
     }
     */
-
+    override func viewWillAppear(animated: Bool) {
+        /*
+        if var storedtoDoFeed : AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("toDoFeed") {
+            
+            toDoFeed = []
+            
+            for var i = storedtoDoFeed.count as Int; i > 0; --i {
+                
+                toDoFeed.append([storedtoDoFeed[i-1][0] as NSString, storedtoDoFeed[i-1][1] as NSString])
+                
+            }
+            
+            
+        }
+        */
+        toDoFeed = reverse(currentPatient!["newsfeed"] as [[String]])
+        
+        tasksTable.reloadData()
+    }
     /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -106,7 +88,7 @@ class DoctorListTableViewController: UITableViewController {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

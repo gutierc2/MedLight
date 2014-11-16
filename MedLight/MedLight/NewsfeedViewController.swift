@@ -43,11 +43,11 @@ class NewsfeedViewController: UIViewController, UITableViewDelegate {
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        var cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
         cell.textLabel.text = toDoFeed[indexPath.row][1]+" "+toDoFeed[indexPath.row][0]
+        cell.detailTextLabel!.text = toDoFeed[indexPath.row][2]+" @ "+toDoFeed[indexPath.row][3]
         
-        println(toDoFeed)
         
         return cell
         

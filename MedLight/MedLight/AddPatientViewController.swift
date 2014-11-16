@@ -21,6 +21,25 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
         
     }
     
+    func displayDuplicatePatientAlert(title:String, message:String)
+    {
+        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: addPatientToDrList()))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .Default, handler: nil))
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func addPatientToDrList()
+    {
+            var user = PFUser.currentUser()
+            user.addObject(mrn.text, forKey: "patients")
+            user.save()
+    }
+    
     @IBOutlet var fullName: UITextField!
     
     @IBOutlet var mrn: UITextField!
@@ -59,7 +78,6 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
         if (error != "") {
             
             displayAlert("Cannot Add Patient", error: error)
-        
         } else {
             
             activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
@@ -70,9 +88,25 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
             activityIndicator.startAnimating()
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
-            var patient = PFObject(className: "Patient")
-            
             var user = PFUser.currentUser()
+            var query = PFQuery(className: "Patient")
+            query.whereKey("hospital", equalTo: user["hospital"] as String)
+            query.whereKey("mrn", equalTo: mrn.text)
+            
+            if(query.findObjects().count != 0)
+            {
+                var title = "Duplicate Patient"
+                var guy = query.findObjects()[0] as PFObject
+                var name = guy["fullName"] as String
+                var cc = guy["notes"] as String
+                var message = "Patient with MRN:\(mrn.text) already exists as \(name) with CC: \(cc). Would you like to add this patient?"
+                displayDuplicatePatientAlert(title, message:message)
+                self.activityIndicator.stopAnimating()
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                return
+            }
+            
+            var patient = PFObject(className: "Patient")
             
             if patient["doctors"] == nil
             {

@@ -14,7 +14,20 @@ class AddPostViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func addItem(sender : AnyObject) {
-        currentPatient!.addObject([toDoItem.text, "✴️"], forKey: "newsfeed")
+        var user = PFUser.currentUser()
+        var title = user["title"] as String
+        var name = user["fullName"] as String
+        var date = NSDate()
+        
+        let formatter = NSDateFormatter()
+        
+        formatter.dateStyle = .ShortStyle
+        
+        formatter.timeStyle = .ShortStyle
+        
+        var time = formatter.stringFromDate(date)
+        
+        currentPatient!.addObject([toDoItem.text, "✴️", (title+" "+name), time], forKey: "newsfeed")
         //toDoFeed.append([toDoItem.text, "✴️"])
         /*
         let fixedtoDoFeed = toDoFeed

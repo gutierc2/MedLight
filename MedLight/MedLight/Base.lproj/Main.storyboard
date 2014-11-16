@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="54a-RM-lcH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="54a-RM-lcH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="1415" y="848"/>
         </scene>
-        <!--Notepad View Controller-->
+        <!--Notepad-->
         <scene sceneID="Da0-f6-1Kt">
             <objects>
                 <viewController id="4Kk-Qp-Ehi" customClass="NotepadViewController" customModule="MedLight" customModuleProvider="target" sceneMemberID="viewController">
@@ -106,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="NOTES" id="ftc-L8-AfA">
-                                <rect key="frame" x="6" y="20" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
@@ -116,7 +116,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="916-VJ-9gj"/>
+                    <navigationItem key="navigationItem" title="Notepad" id="916-VJ-9gj"/>
                     <connections>
                         <outlet property="notes" destination="ftc-L8-AfA" id="ni7-Os-ok7"/>
                     </connections>
@@ -154,7 +154,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Newsfeed" id="LXQ-e4-Dav">
+                    <navigationItem key="navigationItem" title="MedFeed" id="LXQ-e4-Dav">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="W8l-m7-U22">
                             <connections>
                                 <segue destination="c6k-xL-3ki" kind="push" id="6xt-0t-BU4"/>
@@ -169,7 +169,7 @@
             </objects>
             <point key="canvasLocation" x="1836" y="268"/>
         </scene>
-        <!--Add Post View Controller-->
+        <!--Add Post-->
         <scene sceneID="Ysi-PP-lOY">
             <objects>
                 <viewController id="c6k-xL-3ki" customClass="AddPostViewController" customModule="MedLight" customModuleProvider="target" sceneMemberID="viewController">
@@ -196,7 +196,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LH3-WI-btg"/>
+                    <navigationItem key="navigationItem" title="Add Post" id="LH3-WI-btg"/>
                     <connections>
                         <outlet property="toDoItem" destination="UGu-gC-myr" id="WTp-xY-NpO"/>
                     </connections>
@@ -451,7 +451,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ruo-Db-sSj">
-                                <rect key="frame" x="85" y="64" width="150" height="150"/>
+                                <rect key="frame" x="85" y="84" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ifa-Yi-n9W">
@@ -465,13 +465,14 @@
                                     <segue destination="slT-1g-pH4" kind="modal" id="64u-aN-vsh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedLight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yc8-wb-oyL">
-                                <rect key="frame" x="124" y="35" width="73" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" id="Qp2-pe-qv0">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.44999999999999996" width="1" height="1"/>
+                                <items>
+                                    <navigationItem title="MedLight" id="2dA-M2-YGK"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -510,14 +511,7 @@
                                     <segue destination="YzV-ga-HsJ" kind="modal" id="iID-SF-bLx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedLight" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lcf-pw-vNM">
-                                <rect key="frame" x="124" y="35" width="73" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="thisismypassword" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="TZa-8S-Ttg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="TZa-8S-Ttg">
                                 <rect key="frame" x="60" y="307" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -526,7 +520,7 @@
                                     <outlet property="delegate" destination="Csk-Y8-CtH" id="UEo-v3-PjH"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="you@medlight.com" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="nMe-C0-zW6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="btham@medlight.com" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" id="nMe-C0-zW6">
                                 <rect key="frame" x="61" y="269" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -536,19 +530,29 @@
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZE0-bD-lfS">
-                                <rect key="frame" x="85" y="64" width="150" height="150"/>
+                                <rect key="frame" x="85" y="84" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UaI-Mr-uDP">
-                                <rect key="frame" x="22" y="31" width="35" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="54a-RM-lcH" kind="modal" id="JUg-Ek-gFF"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" id="McH-r4-iPN">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Doctor Login" id="m7Z-Wc-PCa">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="DrB-99-G5Z">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UaI-Mr-uDP">
+                                                <rect key="frame" x="22" y="31" width="35" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="54a-RM-lcH" kind="modal" id="JUg-Ek-gFF"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -570,7 +574,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hospital Name" minimumFontSize="17" id="dWB-gS-vvf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="UCI" borderStyle="roundedRect" placeholder="Hospital Name" minimumFontSize="17" id="dWB-gS-vvf">
                                 <rect key="frame" x="60" y="250" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -580,17 +584,10 @@
                                 </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qAm-Dt-KN1">
-                                <rect key="frame" x="85" y="64" width="150" height="150"/>
+                                <rect key="frame" x="85" y="84" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedLight" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ez-I9-Tt3">
-                                <rect key="frame" x="85" y="35" width="150" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medical Record Number" minimumFontSize="17" id="8z7-Hq-0bO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234567890" borderStyle="roundedRect" placeholder="Medical Record Number" minimumFontSize="17" id="8z7-Hq-0bO">
                                 <rect key="frame" x="60" y="288" width="201" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -599,16 +596,6 @@
                                     <outlet property="delegate" destination="slT-1g-pH4" id="6AA-rI-V03"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vGL-bY-Okk">
-                                <rect key="frame" x="16" y="20" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="54a-RM-lcH" kind="modal" id="IpC-O7-voW"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="J5m-3g-yY2">
                                 <rect key="frame" x="135" y="365" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -619,6 +606,26 @@
                                     <action selector="signInPressed:" destination="slT-1g-pH4" eventType="touchUpInside" id="HDe-xS-c0E"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" id="gmG-1y-wMS">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Patient Login" id="8Be-8l-VRS">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="M39-ug-rrZ">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vGL-bY-Okk">
+                                                <rect key="frame" x="16" y="20" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="54a-RM-lcH" kind="modal" id="IpC-O7-voW"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -805,7 +812,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lxl-lA-ycQ" id="cFm-Ns-g60">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Newsfeed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wmj-be-m55">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MedFeed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wmj-be-m55">
                                                     <rect key="frame" x="8" y="11" width="304" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -814,6 +821,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="I2M-uy-nmX" kind="push" id="dOM-Mp-BNI"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="FCU-sf-Zr7">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -847,6 +857,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="LU2-vC-Oc1" kind="push" id="NVt-5c-9ag"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="m7K-I9-Uvu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -881,21 +894,41 @@
             </objects>
             <point key="canvasLocation" x="810" y="1346"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Notepad-->
+        <scene sceneID="D0j-m2-VnE">
+            <objects>
+                <viewController id="LU2-vC-Oc1" customClass="PatientNotepadViewController" customModule="MedLight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sw1-XN-kNc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="NOTES" id="dkk-Rd-QdG">
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notepad" id="xeF-W3-srw"/>
+                    <connections>
+                        <outlet property="notes" destination="dkk-Rd-QdG" id="QG8-Bo-yeo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7mY-GV-nZz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1470" y="1584"/>
+        </scene>
+        <!--MedFeed-->
         <scene sceneID="1Y9-fq-61y">
             <objects>
-                <tableViewController id="I2M-uy-nmX" sceneMemberID="viewController">
+                <tableViewController title="MedFeed" id="I2M-uy-nmX" customClass="PatientFeedTableViewController" customModule="MedLight" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uMH-c8-k94">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="8Vb-tx-9vh">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Newsfeed" id="pNv-Pr-fxC"/>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kGx-tB-OUC">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -909,6 +942,10 @@
                             <outlet property="delegate" destination="I2M-uy-nmX" id="yK7-Yc-6dr"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="MedFeed" id="1o2-6S-hpi"/>
+                    <connections>
+                        <outlet property="tasksTable" destination="uMH-c8-k94" id="ZYz-6B-CpW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6pt-tl-jqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -937,7 +974,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="My Doctors" id="nzL-td-a92"/>
                     <connections>
-                        <outlet property="doctorTable" destination="7eD-6B-zCC" id="2vU-AM-Bjo"/>
+                        <outlet property="doctorTable" destination="7eD-6B-zCC" id="zxE-Nd-28C"/>
                         <segue destination="VBN-wa-JnC" kind="push" identifier="doctorProfile" id="gFj-wA-JWm"/>
                     </connections>
                 </tableViewController>
@@ -1038,7 +1075,8 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="9f9-0j-kDg"/>
-        <segue reference="ywc-qb-ILH"/>
-        <segue reference="Olp-5l-Ij3"/>
+        <segue reference="IpC-O7-voW"/>
+        <segue reference="dOM-Mp-BNI"/>
+        <segue reference="JDg-yT-zaj"/>
     </inferredMetricsTieBreakers>
 </document>

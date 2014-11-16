@@ -114,7 +114,7 @@ class EditProfileViewController: UIViewController,UINavigationControllerDelegate
             self.activityIndicator.stopAnimating()
             UIApplication.sharedApplication().endIgnoringInteractionEvents()
         
-        
+            displayAlert("Success!", error: "Changes have been saved.")
         }
     }
     
