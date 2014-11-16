@@ -50,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Patient Name" minimumFontSize="17" id="klx-tf-tIP">
-                                <rect key="frame" x="16" y="222" width="288" height="30"/>
+                                <rect key="frame" x="16" y="92" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -59,7 +59,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Medical Record Number (MRN)" minimumFontSize="17" id="lBd-Fd-J6N">
-                                <rect key="frame" x="16" y="260" width="288" height="30"/>
+                                <rect key="frame" x="16" y="130" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -67,43 +67,28 @@
                                     <outlet property="delegate" destination="BTl-un-3UK" id="bny-HQ-tmC"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5AS-Ez-Tgp">
-                                <rect key="frame" x="99" y="184" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Choose An Image">
-                                    <color key="titleColor" red="0.15664450029999999" green="1" blue="0.060259341199999997" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseImage:" destination="BTl-un-3UK" eventType="touchUpInside" id="1rK-sU-M0g"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="315px-Blank_woman_placeholder.png" id="eRn-Ca-104">
-                                <rect key="frame" x="106" y="76" width="109" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chief Complaint" minimumFontSize="17" id="72p-RP-WEU">
-                                <rect key="frame" x="16" y="298" width="288" height="30"/>
+                                <rect key="frame" x="16" y="168" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2a9-ce-Vqw">
-                                <rect key="frame" x="120" y="336" width="81" height="30"/>
+                                <rect key="frame" x="120" y="206" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Patient">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="postImage:" destination="BTl-un-3UK" eventType="touchUpInside" id="L8S-R3-zBO"/>
+                                    <action selector="addPatient:" destination="BTl-un-3UK" eventType="touchUpInside" id="YCa-vR-KsZ"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Patient" id="MBE-uT-xbH"/>
                     <connections>
                         <outlet property="fullName" destination="klx-tf-tIP" id="oOV-pq-Csq"/>
-                        <outlet property="imageToPost" destination="eRn-Ca-104" id="zvt-1t-O0o"/>
                         <outlet property="mrn" destination="lBd-Fd-J6N" id="8Ty-39-BpY"/>
                         <outlet property="notes" destination="72p-RP-WEU" id="4Hb-C4-mix"/>
                     </connections>
@@ -318,6 +303,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qz2-rd-smB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1356" y="-290"/>
+        </scene>
+        <!--Doctor Profile-->
+        <scene sceneID="RBB-I6-kQV">
+            <objects>
+                <viewController title="Doctor Profile" id="KXA-vR-cnD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yYv-dY-DDL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFX-mn-QyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="-346"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7rY-Vb-d0A">
@@ -876,17 +875,14 @@
             <point key="canvasLocation" x="-198" y="1347"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="315px-Blank_woman_placeholder.png" width="315" height="315"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bPo-HS-e1q"/>
         <segue reference="9f9-0j-kDg"/>
+        <segue reference="ywc-qb-ILH"/>
         <segue reference="Olp-5l-Ij3"/>
     </inferredMetricsTieBreakers>
 </document>

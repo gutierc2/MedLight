@@ -21,11 +21,6 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
         
     }
     
-    
-    
-    
-    @IBOutlet var imageToPost: UIImageView!
-    
     @IBOutlet var fullName: UITextField!
     
     @IBOutlet var mrn: UITextField!
@@ -43,24 +38,8 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
         self.view.endEditing(true)
     }
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        println("Image selected")
-        self.dismissViewControllerAnimated(true, completion:nil)
-        
-        imageToPost.image = image
-        
-        
-    }
     
-    @IBAction func chooseImage(sender: AnyObject) {
-        var image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = UIImagePickerControllerSourceType.Camera
-        image.allowsEditing = false
-        self.presentViewController(image, animated: true, completion: nil)
-    }
-    
-    @IBAction func postImage(sender: AnyObject) {
+    @IBAction func addPatient(sender: AnyObject) {
         
         var error = ""
         
@@ -126,33 +105,12 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
                     self.displayAlert("Could Not Add Patient", error: "Please try again later")
                     
                 } else {
-                    
-                    let imageData = UIImagePNGRepresentation(self.imageToPost.image)
-                    
-                    let imageFile = PFFile(name: "image.png", data: imageData)
-                    
-                    patient["imageFie"] = imageFile
-                    
-                    patient.saveInBackgroundWithBlock{(success: Bool!, error: NSError!) -> Void in
-                        
-                        self.activityIndicator.stopAnimating()
-                        UIApplication.sharedApplication().endIgnoringInteractionEvents()
-                        
-                        if success == false {
                             
-                            self.displayAlert("Could Not Add Patient", error: "Please try again later")
-                        } else {
+                        self.displayAlert("Patient Added!", error : "The patient has been added successfully.")
                             
-                            self.displayAlert("Patient Added!", error : "The patient has been added successfully.")
-                            
-                            self.imageToPost.image = UIImage(named: "315px-Blank_woman_placeholder.png")
-                            
-                            self.fullName.text = ""
-                            self.mrn.text = ""
-                            self.notes.text = ""
-                            
-                        }
-                    }
+                        self.fullName.text = ""
+                        self.mrn.text = ""
+                        self.notes.text = ""
                     
                 }
             }
@@ -165,8 +123,6 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        imageToPost.image = UIImage(named: "315px-Blank_woman_placeholder.png")
         
         fullName.text = ""
         mrn.text = ""
