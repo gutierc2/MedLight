@@ -33,8 +33,8 @@ class DoctorProfileViewController: UIViewController {
         fullName.text = currentDoctor["fullName"] as String
         specialty.text = currentDoctor["specialty"] as String
         hospital.text = currentDoctor["hospital"] as String
-        phone.text = currentDoctor["phone"] as String
-        pager.text = currentDoctor["pager"] as String
+        phone.text = currentDoctor["phoneNumber"] as String
+        pager.text = currentDoctor["pagerNumber"] as String
         email.text = currentDoctor["email"] as String
         
         let userImageFile = currentDoctor["imageFile"] as PFFile

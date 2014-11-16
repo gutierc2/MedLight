@@ -21,30 +21,29 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
         
     }
     
-    func displayDuplicatePatientAlert(title:String, message:String)
-    {
-        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        
-        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: addPatientToDrList()))
-        
-        alert.addAction(UIAlertAction(title: "No", style: .Default, handler: nil))
-        
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    func addPatientToDrList()
-    {
-            var user = PFUser.currentUser()
-            user.addObject(mrn.text, forKey: "patients")
-            user.save()
-    }
-    
     @IBOutlet var fullName: UITextField!
     
     @IBOutlet var mrn: UITextField!
     
     @IBOutlet var notes: UITextField!
+
+    func displayDuplicatePatientAlert(title:String, message:String, patient: PFObject)
+    {
+        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: {(alert: UIAlertAction!) in
+            var user = PFUser.currentUser()
+            user.addObject(self.mrn.text, forKey: "patients")
+            patient.addObject(user["email"] as String, forKey: "doctors")
+            patient.save()
+            user.save()
+            }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .Default, handler: nil))
+        
+        presentViewController(alert, animated: true, completion: nil)
+    }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         fullName.resignFirstResponder()
@@ -100,7 +99,7 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
                 var name = guy["fullName"] as String
                 var cc = guy["notes"] as String
                 var message = "Patient with MRN:\(mrn.text) already exists as \(name) with CC: \(cc). Would you like to add this patient?"
-                displayDuplicatePatientAlert(title, message:message)
+                displayDuplicatePatientAlert(title, message:message, patient: guy)
                 self.activityIndicator.stopAnimating()
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 return
