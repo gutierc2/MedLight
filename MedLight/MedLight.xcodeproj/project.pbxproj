@@ -36,7 +36,6 @@
 		ED1FF79C1A18485200E54104 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF79B1A18485200E54104 /* EditProfileViewController.swift */; };
 		ED1FF79E1A1860B000E54104 /* DoctorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1FF79D1A1860B000E54104 /* DoctorProfileViewController.swift */; };
 		ED2A1C5B1A181F95005D9A2E /* DoctorListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2A1C5A1A181F95005D9A2E /* DoctorListTableViewController.swift */; };
-		ED7C80B11A15769F002B2874 /* 315px-Blank_woman_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */; };
 		ED7C80B31A1584A1002B2874 /* PatientListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */; };
 		EDEEDAF01A15419B00032661 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEEDAEF1A15419B00032661 /* AddPatientViewController.swift */; };
 /* End PBXBuildFile section */
@@ -86,7 +85,6 @@
 		ED1FF79B1A18485200E54104 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		ED1FF79D1A1860B000E54104 /* DoctorProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorProfileViewController.swift; sourceTree = "<group>"; };
 		ED2A1C5A1A181F95005D9A2E /* DoctorListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorListTableViewController.swift; sourceTree = "<group>"; };
-		ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "315px-Blank_woman_placeholder.png"; sourceTree = "<group>"; };
 		ED7C80B21A1584A1002B2874 /* PatientListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientListTableViewController.swift; sourceTree = "<group>"; };
 		EDEEDAEF1A15419B00032661 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,7 +157,6 @@
 				029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */,
 				74C5F6051A0AD5F400247456 /* AppDelegate.swift */,
 				74C5F6071A0AD5F400247456 /* ViewController.swift */,
-				ED7C80B01A15769F002B2874 /* 315px-Blank_woman_placeholder.png */,
 				EDEEDAEF1A15419B00032661 /* AddPatientViewController.swift */,
 				029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */,
 				74C5F6091A0AD5F400247456 /* Main.storyboard */,
@@ -288,7 +285,6 @@
 				74C5F60B1A0AD5F400247456 /* Main.storyboard in Resources */,
 				74C5F6101A0AD5F400247456 /* LaunchScreen.xib in Resources */,
 				74C5F60D1A0AD5F400247456 /* Images.xcassets in Resources */,
-				ED7C80B11A15769F002B2874 /* 315px-Blank_woman_placeholder.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,6 +457,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

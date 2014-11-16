@@ -70,12 +70,10 @@ class DoctorListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("doctorlistdidselectrow")
         var query = PFUser.query()
         query.whereKey("email", equalTo: doctors[indexPath.row])
         currentDoctor = query.findObjects()[0] as PFObject
         
-        println("doctorlistdidselectrow2")
         
         self.performSegueWithIdentifier("doctorProfile", sender: nil)
     }

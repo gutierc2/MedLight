@@ -38,6 +38,10 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
             patient.addObject(user["email"] as String, forKey: "doctors")
             patient.save()
             user.save()
+            self.displayAlert("Patient Added!", error : "The patient has been added successfully.")
+            self.fullName.text = ""
+            self.mrn.text = ""
+            self.notes.text = ""
             }))
         
         alert.addAction(UIAlertAction(title: "No", style: .Default, handler: nil))
@@ -92,7 +96,14 @@ class AddPatientViewController: UIViewController, UINavigationControllerDelegate
             query.whereKey("hospital", equalTo: user["hospital"] as String)
             query.whereKey("mrn", equalTo: mrn.text)
             
-            if(query.findObjects().count != 0)
+            if (contains((user["patients"] as [String]), mrn.text))
+            {
+                self.displayAlert("Could Not Add Patient", error: "Patient already added.")
+                self.activityIndicator.stopAnimating()
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                return
+            }
+            else if(query.findObjects().count != 0)
             {
                 var title = "Duplicate Patient"
                 var guy = query.findObjects()[0] as PFObject

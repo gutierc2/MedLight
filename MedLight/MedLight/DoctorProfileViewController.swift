@@ -18,8 +18,6 @@ class DoctorProfileViewController: UIViewController {
     
     @IBOutlet var phone: UILabel!
     
-    @IBOutlet var pager: UILabel!
-
     @IBOutlet var email: UILabel!
     
     
@@ -27,17 +25,14 @@ class DoctorProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var currentDoctor = PFUser.currentUser()
         
-        fullName.text = currentDoctor["fullName"] as String
-        specialty.text = currentDoctor["specialty"] as String
-        hospital.text = currentDoctor["hospital"] as String
-        phone.text = currentDoctor["phoneNumber"] as String
-        pager.text = currentDoctor["pagerNumber"] as String
-        email.text = currentDoctor["email"] as String
+        fullName.text = currentDoctor!["fullName"] as String
+        specialty.text = currentDoctor!["specialty"] as String
+        hospital.text = currentDoctor!["hospital"] as String
+        phone.text = "Phone: "+(currentDoctor!["phoneNumber"] as String)
+        email.text = "Email: "+(currentDoctor!["email"] as String)
         
-        let userImageFile = currentDoctor["imageFile"] as PFFile
+        let userImageFile = currentDoctor!["imageFile"] as PFFile
         let image = UIImage(data: userImageFile.getData())
         
         profilePic.image = image

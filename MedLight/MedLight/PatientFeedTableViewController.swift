@@ -80,6 +80,7 @@ class PatientFeedTableViewController: UITableViewController {
         
         tasksTable.reloadData()
     }
+    
     /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {

@@ -87,6 +87,27 @@ class PatientListTableViewController: UITableViewController {
         self.performSegueWithIdentifier("viewPatientFeed", sender: nil)
     }
 
+    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            
+            
+            var query = PFQuery(className: "Patient")
+            query.whereKey("hospital", equalTo: user["hospital"] as String)
+            query.whereKey("mrn", equalTo: patients[indexPath.row])
+            currentPatient = query.findObjects()[0] as PFObject
+            currentPatient!.removeObject(user["email"] as String, forKey: "doctors")
+            currentPatient!.save()
+            
+            patients.removeAtIndex(indexPath.row)
+            
+            user!["patients"] = patients
+            user!.save()
+            patientTable.reloadData()
+        }
+    }
+
+
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
