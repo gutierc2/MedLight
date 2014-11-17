@@ -84,8 +84,11 @@ class PatientFeedTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        var mainText = toDoFeed[indexPath.row][1]+" "+toDoFeed[indexPath.row][0]
+        var subText = toDoFeed[indexPath.row][2]+" @ "+toDoFeed[indexPath.row][3]
         
-        // set celltext = the text in the cell
+        
+        celltext = "\(mainText)\n\(subText)"
         self.performSegueWithIdentifier("post", sender: nil)
     }
     
