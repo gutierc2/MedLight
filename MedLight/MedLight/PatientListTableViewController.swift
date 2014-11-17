@@ -10,7 +10,7 @@ import UIKit
 
 var currentPatient : PFObject? = nil
 
-class PatientListTableViewController: UITableViewController {
+class PatientListTableViewController: UITableViewController, UITableViewDelegate {
 
     @IBOutlet var patientTable: UITableView!
     
@@ -54,6 +54,10 @@ class PatientListTableViewController: UITableViewController {
         println(patients)
         
         patientTable.reloadData()
+    }
+    
+    override func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String! {
+        return "D/C"
     }
 
     override func didReceiveMemoryWarning() {
