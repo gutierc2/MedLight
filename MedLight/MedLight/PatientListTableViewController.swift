@@ -51,7 +51,7 @@ class PatientListTableViewController: UITableViewController, UITableViewDelegate
         {
             patients.append(i)
         }
-        println(patients)
+        patients = patients.sorted { $0.localizedCaseInsensitiveCompare($1) == NSComparisonResult.OrderedDescending }
         
         patientTable.reloadData()
     }
@@ -86,7 +86,6 @@ class PatientListTableViewController: UITableViewController, UITableViewDelegate
         query.whereKey("hospital", equalTo: user["hospital"] as String)
         query.whereKey("mrn", equalTo: patients[indexPath.row])
         currentPatient = query.findObjects()[0] as PFObject
-        println(currentPatient)
 
         self.performSegueWithIdentifier("viewPatientFeed", sender: nil)
     }
@@ -107,7 +106,11 @@ class PatientListTableViewController: UITableViewController, UITableViewDelegate
             
             user!["patients"] = patients
             user!.save()
+            
             patientTable.reloadData()
+
+            //SEGUE TO VIEW WITH TEXTVIEW FOR DISCHARGE
+            self.performSegueWithIdentifier("discharge", sender: nil)
         }
     }
 

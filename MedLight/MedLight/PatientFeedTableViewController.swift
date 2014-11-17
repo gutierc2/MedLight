@@ -8,6 +8,8 @@
 
 import UIKit
 
+var celltext: String = ""
+
 class PatientFeedTableViewController: UITableViewController {
 
     @IBOutlet var tasksTable:UITableView!
@@ -79,6 +81,12 @@ class PatientFeedTableViewController: UITableViewController {
         toDoFeed = reverse(currentPatient!["newsfeed"] as [[String]])
         
         tasksTable.reloadData()
+    }
+    
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        // set celltext = the text in the cell
+        self.performSegueWithIdentifier("post", sender: nil)
     }
     
     /*

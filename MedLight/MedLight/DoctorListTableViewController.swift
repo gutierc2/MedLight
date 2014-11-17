@@ -33,13 +33,14 @@ class DoctorListTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+        var cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
         var query = PFUser.query()
         query.whereKey("email", equalTo: doctors[indexPath.row])
         var d = query.findObjects()[0] as PFObject
         
         cell.textLabel.text = d["fullName"] as String
+        cell.detailTextLabel!.text = d["specialty"] as String
         
         return cell
     }

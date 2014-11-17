@@ -12,6 +12,7 @@
 		029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */; };
 		029EFCF81A12DDE1008D0F87 /* NewsfeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */; };
 		029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */; };
+		02D91D951A197F0A00AC3858 /* DischargeSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D91D941A197F0A00AC3858 /* DischargeSummaryViewController.swift */; };
 		740160DE1A146D1C0028092D /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740160DD1A146D1C0028092D /* RegistrationViewController.swift */; };
 		740160E11A146D780028092D /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740160DF1A146D780028092D /* Bolts.framework */; };
 		740160E21A146D780028092D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 740160E01A146D780028092D /* Parse.framework */; };
@@ -56,6 +57,7 @@
 		029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotepadViewController.swift; sourceTree = "<group>"; };
 		029EFCF71A12DDE1008D0F87 /* NewsfeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsfeedViewController.swift; sourceTree = "<group>"; };
 		029EFCF91A12DE2D008D0F87 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		02D91D941A197F0A00AC3858 /* DischargeSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DischargeSummaryViewController.swift; sourceTree = "<group>"; };
 		740160DD1A146D1C0028092D /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		740160DF1A146D780028092D /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		740160E01A146D780028092D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				EDEEDAEF1A15419B00032661 /* AddPatientViewController.swift */,
 				029EFCED1A11EF4D008D0F87 /* NotepadViewController.swift */,
 				74C5F6091A0AD5F400247456 /* Main.storyboard */,
+				02D91D941A197F0A00AC3858 /* DischargeSummaryViewController.swift */,
 				02570B9E1A187E200064C2FC /* PatientNotepadViewController.swift */,
 				02570B9C1A1873950064C2FC /* PatientFeedTableViewController.swift */,
 				ED1FF79D1A1860B000E54104 /* DoctorProfileViewController.swift */,
@@ -308,6 +311,7 @@
 				74A1B2E91A1743270048BD8A /* PatientLoginViewController.swift in Sources */,
 				740160DE1A146D1C0028092D /* RegistrationViewController.swift in Sources */,
 				ED1FF79E1A1860B000E54104 /* DoctorProfileViewController.swift in Sources */,
+				02D91D951A197F0A00AC3858 /* DischargeSummaryViewController.swift in Sources */,
 				ED7C80B31A1584A1002B2874 /* PatientListTableViewController.swift in Sources */,
 				029EFCEE1A11EF4D008D0F87 /* NotepadViewController.swift in Sources */,
 				029EFCFA1A12DE2D008D0F87 /* AddPostViewController.swift in Sources */,
@@ -441,6 +445,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MedLight",
@@ -448,6 +454,7 @@
 				INFOPLIST_FILE = MedLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MedLight-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -459,6 +466,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/MedLight",
@@ -466,6 +475,7 @@
 				INFOPLIST_FILE = MedLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MedLight-Bridging-Header.h";
 			};
 			name = Release;
