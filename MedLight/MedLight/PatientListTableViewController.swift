@@ -37,8 +37,11 @@ class PatientListTableViewController: UITableViewController, UITableViewDelegate
         query.whereKey("mrn", equalTo: patients[indexPath.row])
         var p = query.findObjects()[0] as PFObject
         
-        cell.textLabel.text = p["fullName"] as String
+        cell.textLabel.text = p["fullName"] as? String
         cell.detailTextLabel!.text = (p["notes"] as String) + " (MRN:" + (p["mrn"] as String) + ")"
+        
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
         return cell
     }
     
@@ -85,12 +88,12 @@ class PatientListTableViewController: UITableViewController, UITableViewDelegate
         var query = PFQuery(className: "Patient")
         query.whereKey("hospital", equalTo: user["hospital"] as String)
         query.whereKey("mrn", equalTo: patients[indexPath.row])
-        currentPatient = query.findObjects()[0] as PFObject
+        currentPatient = query.findObjects()[0] as? PFObject
 
         self.performSegueWithIdentifier("viewPatientFeed", sender: nil)
     }
 
-    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             
@@ -98,7 +101,7 @@ class PatientListTableViewController: UITableViewController, UITableViewDelegate
             var query = PFQuery(className: "Patient")
             query.whereKey("hospital", equalTo: user["hospital"] as String)
             query.whereKey("mrn", equalTo: patients[indexPath.row])
-            currentPatient = query.findObjects()[0] as PFObject
+            currentPatient = query.findObjects()[0] as? PFObject
             currentPatient!.removeObject(user["email"] as String, forKey: "doctors")
             currentPatient!.save()
             

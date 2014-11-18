@@ -70,7 +70,7 @@ class PatientLoginViewController: UIViewController, UITextFieldDelegate {
             activityIndicator.startAnimating()
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
-            currentPatient = guy![0] as PFObject
+            currentPatient = guy![0] as? PFObject
             
             self.activityIndicator.stopAnimating()
             UIApplication.sharedApplication().endIgnoringInteractionEvents()

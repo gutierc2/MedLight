@@ -39,8 +39,11 @@ class DoctorListTableViewController: UITableViewController {
         query.whereKey("email", equalTo: doctors[indexPath.row])
         var d = query.findObjects()[0] as PFObject
         
-        cell.textLabel.text = d["fullName"] as String
-        cell.detailTextLabel!.text = d["specialty"] as String
+        cell.textLabel.text = d["fullName"] as? String
+        cell.detailTextLabel!.text = d["specialty"] as? String
+
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+
         
         return cell
     }
@@ -73,7 +76,7 @@ class DoctorListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var query = PFUser.query()
         query.whereKey("email", equalTo: doctors[indexPath.row])
-        currentDoctor = query.findObjects()[0] as PFObject
+        currentDoctor = query.findObjects()[0] as? PFObject
         
         
         self.performSegueWithIdentifier("doctorProfile", sender: nil)

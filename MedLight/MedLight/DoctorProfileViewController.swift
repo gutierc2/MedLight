@@ -26,9 +26,9 @@ class DoctorProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fullName.text = currentDoctor!["fullName"] as String
-        specialty.text = currentDoctor!["specialty"] as String
-        hospital.text = currentDoctor!["hospital"] as String
+        fullName.text = currentDoctor!["fullName"] as? String
+        specialty.text = currentDoctor!["specialty"] as? String
+        hospital.text = currentDoctor!["hospital"] as? String
         phone.text = "Phone: "+(currentDoctor!["phoneNumber"] as String)
         email.text = "Email: "+(currentDoctor!["email"] as String)
         

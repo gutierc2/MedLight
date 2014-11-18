@@ -50,6 +50,7 @@ class PatientFeedTableViewController: UITableViewController {
         cell.textLabel.text = toDoFeed[indexPath.row][1]+" "+toDoFeed[indexPath.row][0]
         cell.detailTextLabel!.text = toDoFeed[indexPath.row][2]+" @ "+toDoFeed[indexPath.row][3]
         
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         return cell
 
@@ -83,7 +84,7 @@ class PatientFeedTableViewController: UITableViewController {
         tasksTable.reloadData()
     }
     
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var mainText = toDoFeed[indexPath.row][1]+" "+toDoFeed[indexPath.row][0]
         var subText = toDoFeed[indexPath.row][2]+" @ "+toDoFeed[indexPath.row][3]
         
